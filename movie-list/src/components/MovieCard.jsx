@@ -1,10 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const MovieCard = ({
+const MovieCard = ({ movie,
   movie: { title, vote_average, poster_path, release_date, original_language },
 }) => {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate(`/movie/${movie.id}`, {
+      state: { movie }
+    })
+  }
+
   return (
-    <div className="movie-card">
+    <div className="movie-card" onClick={handleNavigate}>
       <img
         src={
           poster_path
