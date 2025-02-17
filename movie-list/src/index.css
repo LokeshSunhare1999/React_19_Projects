@@ -13,8 +13,7 @@
 
   --color-dark-100: #0f0d23;
 
-  --color-dark-200: #221F3D;
-
+  --color-dark-200: #221f3d;
 
   --font-dm-sans: DM Sans, sans-serif;
 
@@ -28,6 +27,7 @@
     font-family: "DM Sans", serif;
     font-optical-sizing: auto;
     background: #030014;
+    overflow-x: hidden;
   }
 
   h1 {
@@ -43,7 +43,7 @@
   }
 
   header {
-    @apply sm:mt-10 mt-5;
+    /* @apply sm:mt-10; */
   }
 
   header img {
@@ -57,9 +57,8 @@
   }
 
   .wrapper {
-    @apply px-5 py-12 xs:p-10 max-w-7xl mx-auto flex flex-col relative z-10;
+    @apply px-5 xs:px-10 max-w-7xl mx-auto flex flex-col relative z-10;
   }
-
 
   .trending {
     @apply mt-20;
@@ -192,13 +191,13 @@
       @apply w-full h-100 object-fill rounded-xl shadow-lg;
     }
   }
-  .basic-details{
-    @apply  p-5 h-dvh rounded-2xl inset-0 drop-shadow-[0_0_100px_rgba(171,139,255,0.3)];
+  .basic-details {
+    @apply p-5 h-dvh rounded-2xl inset-0 drop-shadow-[0_0_100px_rgba(171,139,255,0.3)];
 
     & .visit-homepage-btn {
       @apply bg-purple-600 hover:bg-purple-700 px-5 py-2 rounded-lg text-white cursor-pointer;
     }
-    & .visit-homepage{
+    & .visit-homepage {
       @apply flex gap-2 mb-4 justify-around;
     }
   }
